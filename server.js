@@ -102,6 +102,11 @@ initDb(function(err){
   console.log('Error connecting to Mongo. Message:\n'+err);
 });
 
+app.use(express.static('css'))
+app.use(express.static('images'))
+app.use(express.static('js'))
+
+
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
 
