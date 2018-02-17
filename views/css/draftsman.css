@@ -1,0 +1,206 @@
+/*
+ * Palette:
+ * Green #82b51c
+ * Light Gray #999999
+ * Dark Gray #4c4c4c
+ * White #fefefe
+ * Black #000000
+ */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v11/yg0glPPxXUISnKUejCX4qfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    background-color: #000000;
+    font-family: Oswald;
+    color: #fefefe;
+}
+
+#output {
+    background-color: #ffbaba;
+    color: black;
+}
+
+.row.content {
+    height: 100%;
+}
+
+.tap-container, .tap-header {
+    position: relative; /* For .center-line, .gone, and .soon overlays */
+    float: left;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    height: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.center-line {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0%;
+    border-right: 3px solid #4c4c4c;
+    height: 100%;
+}
+
+.beer-nr {
+    font-size: 1.5em;
+    text-align: center;
+    width: 4%;
+}
+
+.beer-glass {
+    height: 80%;
+    width: auto;
+}
+
+.srm-01 {
+    background-color: #f0eebc;
+}
+
+.srm-02 {
+    background-color: #e9d67d;
+}
+
+.srm-04 {
+    background-color: #dcb236;
+}
+
+.srm-05 {
+    background-color: #d5a435;
+}
+
+.srm-07 {
+    background-color: #c88b2d;
+}
+
+.srm-09 {
+    background-color: #bb7531;
+}
+
+.srm-13 {
+    background-color: #a7582e;
+}
+
+.srm-17 {
+    background-color: #984626;
+}
+
+.srm-22 {
+    background-color: #813124;
+}
+
+.srm-27 {
+    background-color: #682519;
+}
+
+.srm-34 {
+    background-color: #501113;
+}
+
+.srm-44 {
+    background-color: #311214;
+}
+
+.srm-pink {
+    background-color: #ff80b7;
+}
+
+.srm-green {
+    background-color: #82b51c;
+}
+
+.srm-extralight {
+    background-color: #e9d76c;
+}
+
+.srm-light {
+    background-color: #dab700;
+}
+
+.srm-gold {
+    background-color: #c38e0d;
+}
+
+.srm-amber {
+    background-color: #a86222;
+}
+
+.srm-brown {
+    background-color: #671714;
+}
+
+.srm-dark {
+    background-color: #240c11;
+}
+
+.beer-desc {
+    white-space: nowrap;
+    min-width: 25%;
+}
+
+.beer-name {
+    font-size: 2.5em;
+    color: #82b51c;
+}
+
+.beer-style {
+    margin-left: 0.5em;
+    font-size: 1.5em;
+    color: #999999;
+}
+
+.beer-abv {
+    display: block;
+    font-size: 1.5em;
+    margin-left: auto;
+    padding-left: 1.5em;
+}
+
+.beer-price {
+    display: block;
+    font-size: 1.5em;
+    padding-left: 0.5em;
+}
+
+.beer-price-taste {
+    display: block;
+    font-size: 1em;
+}
+
+div .soon {
+    width: 98%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.8);
+}
+
+div .gone div:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    border-bottom: 5px solid #4c4c4c;
+    width: 96%;
+}
